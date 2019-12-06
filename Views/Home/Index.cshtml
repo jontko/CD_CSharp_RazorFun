@@ -5,16 +5,17 @@
 <div class="text-center">
     <h1 class="display-4">Here are some delicious foods!</h1>
 @{
-    var StringList = new List<string>
+        foreach(var food in ViewBag.FoodList)
         {
-            "Pizza",
-            "Hamburger",
-            "Chocolate",
-            "Water"
-        };
-        foreach(var food in StringList)
-        {
-            <p>@food</p>
+            if (food[0].ToString() == "c" || food[0].ToString() == "C")
+            {
+                <p class="text-danger">@food</p>
+            }
+            else{
+                <p>@food</p>
+            }
+            
+
         }
 }
 

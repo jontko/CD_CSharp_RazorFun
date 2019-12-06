@@ -20,6 +20,14 @@ namespace RazorFun.Controllers
 
         public IActionResult Index()
         {
+        var StringList = new List<string>
+            {
+                "Pizza",
+                "Hamburger",
+                "Chocolate",
+                "Water"
+            };
+            ViewBag.FoodList = StringList;
             return View();
         }
 
